@@ -2,8 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
-
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)    # auth(인증)의 User(사용자 정보 테이블)를 참조. 삭제 시 cascade
     title = models.CharField(max_length=200)
